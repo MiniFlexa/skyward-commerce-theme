@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Aviation theme specific colors
+				sky: {
+					light: '#E0F2FF',
+					DEFAULT: '#89CFF0',
+					dark: '#3A7CA5'
+				},
+				navy: {
+					light: '#4A6FA5',
+					DEFAULT: '#2C3E50',
+					dark: '#1A2530'
+				},
+				cloud: {
+					DEFAULT: '#F7F9FC'
+				},
+				metal: {
+					light: '#E8E8E8',
+					DEFAULT: '#C0C0C0',
+					dark: '#7D7D7D'
 				}
 			},
 			borderRadius: {
@@ -84,11 +104,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 5s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'sky-gradient': 'linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%)',
+				'hero-pattern': 'linear-gradient(to bottom, rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.8)), url("/hero-bg.jpg")'
 			}
 		}
 	},
